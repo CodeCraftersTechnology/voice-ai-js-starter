@@ -4,7 +4,7 @@ dotenv.config();
 const WebSocket = require("ws");
 const { Assistant } = require("./lib/assistant");
 
-const PORT = 8000;
+const PORT = process.env.PORT || 8000;
 
 const server = new WebSocket.Server({ port: PORT });
 
